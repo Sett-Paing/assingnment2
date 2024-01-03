@@ -1,0 +1,116 @@
+@mixin header{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+@mixin button{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+}
+
+@mixin bloc{
+    text-align: center;
+    width: 33%;
+    background-color: #df4141;
+}
+
+@mixin contain{
+    width: 770px;
+    margin: 0 auto;
+}
+
+.container{
+    @include contain;
+}
+
+@mixin content1{
+    width: 87%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 32px;
+}
+
+@mixin content2{
+    background-color: #f59e9e;
+    display: flex;
+    width: 100%;
+}
+
+h1{
+    @include header;
+}
+
+.c-btn{
+    @include bloc;
+    a{
+        color: #fff;
+    }
+}
+.btn{
+    @include button;
+}
+
+.l-content{
+    @include content1;
+    .l-content__bloc{
+        flex-wrap: wrap;
+        overflow: hidden;
+        img{
+            width: 200px;
+        }
+    }
+}
+
+.img__hover:hover{
+    opacity: 1;
+    transform: scale(1.08);
+    transition: all 1s ease;
+    
+
+}
+
+//  .img__hover:hover{
+//     transform: scale(1.08);
+//  }
+
+.c-content{
+    .c-content__bloc{
+        @include content2;
+    }
+
+}
+
+.p-btn{
+    color: #a34747;
+    border: 2px solid #a34747;
+    transform: skew(150deg);
+    width: 160px;
+    padding: 5px;
+    margin: 8px;
+    text-shadow: #df4141;
+    text-decoration: none;
+    transition: all 1s ease;
+    a{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.p-btn:hover{
+    background-color: #df4141;
+    a{
+    color: white;
+    }
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+}
